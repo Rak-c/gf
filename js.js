@@ -9,7 +9,7 @@ document.getElementById("request-date").value = TodayDate();
 var selectYear = document.getElementById("select-year");
 var d = new Date();
 var n = d.getFullYear();
-for (let index = n; index >= 1981; index--) {
+for (let index = n; index >= 1950; index--) {
   var option = document.createElement("option");
   option.text = index;
   selectYear.add(option);
