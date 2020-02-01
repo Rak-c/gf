@@ -1,22 +1,46 @@
-document.getElementById("extra-btn").addEventListener("click", function() {
+document.getElementById("extra-btn").addEventListener("click", function () {
   var node = document.createElement("div");
   var clone = document.getElementById("selectors-section").cloneNode(true);
   node.appendChild(clone);
   document.getElementById("data-section").appendChild(node);
 });
 
-$(document).ready(function() {
-  $("form").change(function() {
-    console.log(
-      $(this)
-        .closest("form")
-        .serialize()
-    );
-  });
-});
+document.getElementById("request-date").value = TodayDate();
+var selectYear = document.getElementById("select-year");
+var d = new Date();
+var n = d.getFullYear();
+for (let index = n; index >= 1981; index--) {
+  var option = document.createElement("option");
+  option.text = index;
+  selectYear.add(option);
+}
 
-document.getElementById("submit-btn").addEventListener("click", function(e) {
+// $(document).ready(function () {
+//   $("form").change(function () {
+//     console.log(
+//       $(this)
+//       .closest("form")
+//       .serialize()
+//     );
+//   });
+// });
+
+document.getElementById("submit-btn").addEventListener("click", function (e) {
   e.preventDefault();
+  let list = [];
+  let br = 0;
+  $("select").each(function () {
+    if (br == 3) {
+      list.push("      ");
+      br = 0;
+    }
+    list.push($(this).val())
+    br++;
+  })
+  var body = `المقدم: ${$("#sname").val()}` + '\r\n' + `التاريخ: ${TodayDate()}` +
+    '\r\n' + `الهاتف: ${$("#sphone").val()}` + '\r\n' + `الطالب: ${$("#student-name").val()}` +
+    '\r\n' + `المدرسة: ${$("#school-name").val()}` +
+    '\r\n' + `الطلب: ${list}`;
   Email.send({
     Host: "smtp.elasticemail.com",
     Username: "9597011@gmail.com",
@@ -24,8 +48,24 @@ document.getElementById("submit-btn").addEventListener("click", function(e) {
     To: "f_22w3@hotmail.com",
     From: "9597011@gmail.com",
     Subject: "هاااانو",
-    Body: $(this)
-      .closest("form")
-      .serialize()
-  }).then(message => alert(message));
+    Body: body
+  }).then((message) => {
+    if (message == "OK") {
+      $("#main").addClass("blur");
+      $("#main2").removeClass("hide");
+      $("#overlay").addClass("disable")
+      $("body").css("overflow", "hidden");
+    } else {
+      alert(message);
+    }
+  });
 });
+
+function TodayDate() {
+  var today = new Date();
+  var dd = String(today.getDate()).padStart(2, '0');
+  var mm = String(today.getMonth() + 1).padStart(2, '0');
+  var yyyy = today.getFullYear();
+  return today = mm + '/' + dd + '/' + yyyy;
+
+}
