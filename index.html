@@ -1,211 +1,148 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Tajawal&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-  </head>
-  <body>
-    <div>
-      <div class="frame">
-        <div class="frame-content frame-content__fullwidth">
-          <div class="frame-top"></div>
-          <div class="frame-container">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+
+  <link href="https://fonts.googleapis.com/css?family=Tajawal&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+  <div>
+    <div class="frame">
+      <div class="frame-content frame-content__fullwidth">
+        <div class="frame-top"></div>
+        <div id="main" class="frame-container">
+          <div>
             <div>
-              <div>
-                <div class="frame-panel">
-                  <div class="frame-panel-body">
-                    <h2 class="text-center">
-                      طلب شهادة لمن يهمه الأمر - التسلسل الدراسي (2)
-                    </h2>
-                    <div class="frame-header text-right">
-                      لسرعة إنجاز المعاملة يرجى اتباع مايلي :: <br />
-                      .تحديد السنوات الدراسية بدقة - <br />
-                      كتابة اسم الطالب الثلاثي او الرباعي حسب ماكان مقيداً في
-                      المدرسة - <br />
-                      إرفاق صورة من الشهادات الدراسية السابقة أو شهادة واحدة (
-                      إن وجدت ) -<br />
-                      .للمساعدة في سرعة إنجاز المعامة <br />
-                      بعد إنجاز المعاملة يتم الاتصال بمقدم الطلب للحضور, ونعتذر
-                      عن التأخير في - <br />.حال أن بيانات الطلب غير صحيحة أو
-                      غير مكتملة
-                    </div>
-                    <div class="or">البيانات</div>
-                    <form class="form">
-                      <div class="frame-form text-right">
-                        <div class="form-group has-feedback">
-                          <label for="sname" class="control-label"
-                            >اسم مقدم الطلب</label
-                          >
-                          <input
-                            type="text"
-                            lang="ar"
-                            required
-                            class="form-control"
-                            id="sname"
-                            name="sname"
-                            autocomplete="off"
-                            value=""
-                          />
-                          <span class="help-block"></span>
-                        </div>
-                        <div class="form-group has-feedback">
-                          <label for="request-date" class="control-label"
-                            >تاريخ تقديم الطلب</label
-                          >
-                          <input
-                            type="date"
-                            required
-                            class="form-control"
-                            id="request-date"
-                            name="request-date"
-                            autocomplete="off"
-                            value=""
-                          />
-                          <span class="help-block"></span>
-                        </div>
-                        <div class="form-group has-feedback">
-                          <label for="sphone" class="control-label"
-                            >رقم الهاتف المتحرك لمقدم الطلب</label
-                          >
-                          <input
-                            type="text"
-                            required
-                            class="form-control"
-                            id="sphone"
-                            name="sphone"
-                            autocomplete="off"
-                            value=""
-                          />
-                          <span class="help-block"></span>
-                        </div>
-                        <div class="form-group has-feedback">
-                          <label for="student-name" class="control-label"
-                            >اسم الطالب</label
-                          >
-                          <input
-                            required
-                            type="text"
-                            class="form-control"
-                            id="student-name"
-                            name="student-name"
-                            autocomplete="off"
-                            value=""
-                          />
-                          <span class="help-block"></span>
-                        </div>
-                        <div class="form-group has-feedback">
-                          <label for="school-name" class="control-label"
-                            >اسم المدرسة</label
-                          >
-                          <input
-                            required
-                            type="text"
-                            class="form-control"
-                            id="school-name"
-                            name="school-name"
-                            autocomplete="off"
-                            value=""
-                          />
-                          <span class="help-block"></span>
-                        </div>
-                        <div class="or">...</div>
-                        <div id="data-section">
-                          <div id="selectors-section" class="form-row">
-                            <div class="form-group col-md-4 has-feedback">
-                              <label for="zone" class="control-label"
-                                >المنطقة التعلمية</label
-                              >
-                              <select required name="zone" class="form-control">
-                                <option value="RAK">رأس الخيمة</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                              </select>
-                              <span class="help-block"></span>
-                            </div>
-                            <div class="form-group col-md-4 has-feedback">
-                              <label for="class" class="control-label"
-                                >الصف
-                              </label>
-                              <select
-                                required
-                                name="class"
-                                class="form-control"
-                              >
-                                <option value="First-grade"
-                                  >الأول ابتدائي</option
-                                >
-                                <option value="Second-grade">2</option>
-                                <option value="Second-grade">3</option>
-                                <option value="Second-grade">4</option>
-                                <option value="Second-grade">5</option>
-                              </select>
-                              <span class="help-block"></span>
-                            </div>
-                            <div class="form-group col-md-4 has-feedback">
-                              <label for="year" class="control-label"
-                                >السنة الدراسية</label
-                              >
-                              <select required name="year" class="form-control">
-                                <option>2019</option>
-                                <option>2018</option>
-                                <option>2017</option>
-                                <option>2018</option>
-                                <option>2018</option>
-                                <option>2018</option>
-                                <option>2018</option>
-                                <option>2018</option>
-                                <option>2018</option>
-                                <option>2018</option>
-                                <option>2018</option>
-                                <option>2018</option>
-                              </select>
-                              <span class="help-block"></span>
-                            </div>
+              <div class="frame-panel">
+                <div class="frame-panel-body">
+                  <h2 class="text-center">
+                    طلب شهادة لمن يهمه الأمر - التسلسل الدراسي
+                  </h2>
+                  <div class="frame-header text-right">
+                    لسرعة إنجاز المعاملة يرجى اتباع مايلي :: <br />
+                    .تحديد السنوات الدراسية بدقة - <br />
+                    كتابة اسم الطالب الثلاثي او الرباعي حسب ماكان مقيداً في
+                    المدرسة - <br />
+                    إرفاق صورة من الشهادات الدراسية السابقة أو شهادة واحدة (
+                    إن وجدت ) -<br />
+                    .للمساعدة في سرعة إنجاز المعامة <br />
+                    بعد إنجاز المعاملة يتم الاتصال بمقدم الطلب للحضور, ونعتذر
+                    عن التأخير في - <br />.حال أن بيانات الطلب غير صحيحة أو
+                    غير مكتملة
+                  </div>
+                  <div class="or">البيانات</div>
+                  <form class="form">
+                    <div class="frame-form text-right">
+                      <div class="form-group has-feedback">
+                        <label for="sname" class="control-label">اسم مقدم الطلب</label>
+                        <input type="text" lang="ar" required class="form-control" id="sname" name="sname"
+                          autocomplete="off" value="" />
+                        <span class="help-block"></span>
+                      </div>
+                      <div class="form-group has-feedback">
+                        <label for="request-date" class="control-label">تاريخ تقديم الطلب</label>
+                        <input type="text" required class="form-control" id="request-date" name="request-date"
+                          autocomplete="off" disabled/>
+                        <span class="help-block"></span>
+                      </div>
+                      <div class="form-group has-feedback">
+                        <label for="sphone" class="control-label">رقم الهاتف المتحرك لمقدم الطلب</label>
+                        <input type="text" required class="form-control" id="sphone" name="sphone" autocomplete="off"
+                          value="" />
+                        <span class="help-block"></span>
+                      </div>
+                      <div class="form-group has-feedback">
+                        <label for="student-name" class="control-label">اسم الطالب</label>
+                        <input required type="text" class="form-control" id="student-name" name="student-name"
+                          autocomplete="off" value="" />
+                        <span class="help-block"></span>
+                      </div>
+                      <div class="form-group has-feedback">
+                        <label for="school-name" class="control-label">اسم المدرسة</label>
+                        <input required type="text" class="form-control" id="school-name" name="school-name"
+                          autocomplete="off" value="" />
+                        <span class="help-block"></span>
+                      </div>
+                      <div class="or">...</div>
+                      <div id="data-section">
+                        <div id="selectors-section" class="form-row">
+                          <div class="form-group col-md-4 has-feedback">
+                            <label for="zone" class="control-label">المنطقة التعلمية</label>
+                            <select id="select-zone" required name="zone" class="form-control">
+                              <option value="رأس الخيمة">رأس الخيمة</option>
+                              <option value="رأس الخيمة">رأس الخيمة</option>
+                              <option value="رأس الخيمة">رأس الخيمة</option>
+                              <option value="رأس الخيمة">رأس الخيمة</option>
+                              <option value="رأس الخيمة">رأس الخيمة</option>
+                            </select>
+                            <span class="help-block"></span>
+                          </div>
+                          <div class="form-group col-md-4 has-feedback">
+                            <label for="class" class="control-label">الصف
+                            </label>
+                            <select id="select-class" required name="class" class="form-control">
+                              <option value="الأول">الأول</option>
+                              <option value="الثاني">الثاني</option>
+                              <option value="الثالث">الثالث</option>
+                              <option value="الرابع">الرابع</option>
+                              <option value="الخامس">الخامس</option>
+                              <option value="السادس">السادس</option>
+                              <option value="السابع">السابع</option>
+                              <option value="الثامن">الثامن</option>
+                              <option value="التاسع">التاسع</option>
+                              <option value="العاشر">العاشر</option>
+                              <option value="الحادي عشر">الحادي عشر</option>
+                              <option value="الثاني عشر">الثاني عشر</option>
+                            </select>
+                            <span class="help-block"></span>
+                          </div>
+                          <div class="form-group col-md-4 has-feedback">
+                            <label for="year" class="control-label">السنة الدراسية</label>
+                            <select id="select-year" required name="year" class="form-control">
+
+                            </select>
+                            <span class="help-block"></span>
                           </div>
                         </div>
-                        <div class="form-group">
-                          <button type="button" id="extra-btn" class="close">
-                            <code>اضافة</code> <span> &#43; </span>
-                          </button>
-                        </div>
-                        <div class="row">
-                          <button
-                            type="button"
-                            id="submit-btn"
-                            class="btn btn-default"
-                          >
-                            تسليم
-                          </button>
-                        </div>
                       </div>
-                      <div>
-                        <input type="checkbox" name="f" value="8" id="f" />
+                      <div class="form-group">
+                        <button type="button" id="extra-btn" class="close">
+                          <code>اضافة</code> <span> &#43; </span>
+                        </button>
                       </div>
-                    </form>
-                  </div>
+                      <div class="row">
+                        <button type="button" id="submit-btn" class="btn btn-default">
+                          تسليم
+                        </button>
+                      </div>
+                    </div>
+                    <div>
+                      <input class="hide" type="checkbox" name="f" value="8" id="f" />
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
           </div>
-          <div class="frame-bottom"></div>
+        </div>
+        <div class="frame-bottom"></div>
+        <div id="main2" class="confirm hide">
+          تم التسليم بنحاح
         </div>
       </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="js.js"></script>
-  </body>
+  </div>
+  <div id="overlay">
+
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="js.js"></script>
+</body>
+
 </html>
