@@ -112,10 +112,25 @@ h2 {
   border-radius: 15px;
   text-align: center;
   position: fixed;
-  top: 40%;
+  top: 36%;
   margin-left: auto;
   margin-right: auto;
   font-family: "Tajawal", sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.deny {
+  font-size: 1.3rem;
+  background: #ff5454;
+  color: white;
+  padding: 80px;
+  border-radius: 15px;
+  text-align: center;
+  position: fixed;
+  top: 36%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Tajawal", sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .hide {
@@ -125,7 +140,6 @@ h2 {
   display:block;
   filter: blur(8px);
   -webkit-filter: blur(8px);
-  transition: all 1s;
 }
 .disable{
   position: relative;
