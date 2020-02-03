@@ -43,11 +43,11 @@ document.getElementById("submit-btn").addEventListener("click", function (e) {
     '\r\n' + `الطلب: ${list}`;
   Email.send({
     Host: "smtp.elasticemail.com",
-    Username: "9597011@gmail.com",
-    Password: "4501E25B2818C4DEAE9D247AF3C0F104167E",
-    To: "f_22w3@hotmail.com",
-    From: "9597011@gmail.com",
-    Subject: "هاااانو",
+    Username: "chcrak@gmail.com",
+    Password: "D688BB6886F9606155B81C8E48663C5511CE",
+    To: "chcrak@gmail.com",
+    From: "chcrak@gmail.com",
+    Subject: `${$("#student-name").val()}طلب تسلسل دراسي لـ`,
     Body: body
   }).then((message) => {
     if (message == "OK") {
@@ -56,7 +56,10 @@ document.getElementById("submit-btn").addEventListener("click", function (e) {
       $("#overlay").addClass("disable")
       $("body").css("overflow", "hidden");
     } else {
-      alert(message);
+      $("#main").addClass("blur");
+      $("#main4").removeClass("hide");
+      $("#overlay").addClass("disable")
+      $("body").css("overflow", "hidden");
     }
   });
 });
