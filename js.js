@@ -59,7 +59,6 @@ document.getElementById("submit-btn").addEventListener("click", function (e) {
       $("#overlay").addClass("disable")
       $("body").css("overflow", "hidden");
     }
-    alert(message)
   });
 });
 
