@@ -42,12 +42,10 @@ document.getElementById("submit-btn").addEventListener("click", function (e) {
     '\r\n' + `المدرسة: ${$("#school-name").val()}` +
     '\r\n' + `الطلب: ${list}`;
   Email.send({
-    Host: "smtp.elasticemail.com",
-    Username: "chcrak@gmail.com",
-    Password: "D688BB6886F9606155B81C8E48663C5511CE",
+    SecureToken: "375103b8-b11b-4107-b24e-5f89797e1850",
     To: "chcrak@gmail.com",
     From: "chcrak@gmail.com",
-    Subject: `${$("#student-name").val()}طلب تسلسل دراسي لـ`,
+    Subject: `طلب تسلسل دراسي ل${$("#student-name").val()}`,
     Body: body
   }).then((message) => {
     if (message == "OK") {
@@ -61,6 +59,7 @@ document.getElementById("submit-btn").addEventListener("click", function (e) {
       $("#overlay").addClass("disable")
       $("body").css("overflow", "hidden");
     }
+    alert(message)
   });
 });
 
