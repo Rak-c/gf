@@ -82,12 +82,12 @@ document.getElementById("form").onsubmit = function (e) {
       $("#main").addClass("blur");
       $("#main2").removeClass("hide");
       $("#overlay").addClass("disable")
-      $("body").css("overflow", "hidden");
+      $("html").css("overflow", "hidden");
     } else {
       $("#main").addClass("blur");
       $("#main4").removeClass("hide");
       $("#overlay").addClass("disable")
-      $("body").css("overflow", "hidden");
+      $("html").css("overflow", "hidden");
     }
     document.getElementById("form").reset();
   });
