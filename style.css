@@ -1,3 +1,6 @@
+html{
+  overflow-x: hidden;
+}
 .frame {
   display: flex;
   min-height: 100vh;
@@ -33,20 +36,19 @@
 }
 
 .frame-top {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  width: 100vw;
 }
-
+.frame-top img{
+  width: 100vw;
+}
 .frame-container {
   max-width: 37rem;
   width: 100%;
   margin: 0 auto;
+  
 }
 
 .frame-panel {
-  margin: 1rem auto 2.6rem;
   background: #fff;
   border: 0 solid #e7f0f8;
   -webkit-box-shadow: 0 0;
