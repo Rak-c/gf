@@ -69,7 +69,7 @@ document.getElementById("form").onsubmit = function (e) {
   Email.send({
     SecureToken: "375103b8-b11b-4107-b24e-5f89797e1850",
     To: "chcrak@gmail.com",
-    From: "chcrak@gmail.com",
+    From: "chcrakgmail.com",
     Subject: `طلب التسلسل الدراسي لـ: ${$("#student-name").val()}`,
     Body: `<div style="letter-spacing: 1px;
     border-right: 6px solid #323130;
