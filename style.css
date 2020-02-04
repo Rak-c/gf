@@ -61,7 +61,7 @@
 
 h2 {
   font-size: 2.8rem;
-  color: #32325c;
+  color: #325c36;
   font-style: normal;
   font-weight: 400;
   text-transform: capitalize;
@@ -76,7 +76,7 @@ h2 {
   justify-content: center;
   font: bold 22px/30px Nunito;
   letter-spacing: 0;
-  color: #32325c;
+  color: #325c36;
 }
 
 .frame-panel .or:after,
@@ -88,12 +88,16 @@ h2 {
   margin: 0 2%;
 }
 
+input[type="text"]:disabled {
+  background: gry;
+}
+
 .frame-form {
   margin-bottom: 4.2rem;
 }
 
 .frame .control-label {
-  color: #32325c;
+  color: #325c36;
   margin-bottom: 0;
   font-weight: 600;
   font-size: 16px;
@@ -108,25 +112,26 @@ h2 {
   font-size: 1.3rem;
   background: #5457ff;
   color: white;
-  padding: 80px;
+  padding: 80px 150px;
   border-radius: 15px;
   text-align: center;
   position: fixed;
-  top: 36%;
+  top: 26%;
   margin-left: auto;
   margin-right: auto;
   font-family: "Tajawal", sans-serif;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .deny {
   font-size: 1.3rem;
   background: #ff5454;
   color: white;
-  padding: 80px;
+  padding: 40px 100px;
   border-radius: 15px;
   text-align: center;
   position: fixed;
-  top: 36%;
+  top: 22%;
   margin-left: auto;
   margin-right: auto;
   font-family: "Tajawal", sans-serif;
@@ -136,12 +141,14 @@ h2 {
 .hide {
   visibility: hidden;
 }
-.blur{
-  display:block;
+
+.blur {
+  display: block;
   filter: blur(8px);
   -webkit-filter: blur(8px);
 }
-.disable{
+
+.disable {
   position: relative;
   transform: translateY(-114%);
   widows: 100vw;
@@ -149,6 +156,7 @@ h2 {
   background-color: transparent;
 
 }
+
 .frame .has-feedback .form-control {
   padding-left: 1rem;
 }
@@ -166,13 +174,13 @@ h2 {
 
 .frame .btn-default {
   color: #fff;
-  background: #5457ff;
+  background: #2E7D32;
 }
 
 code {
-  color: #32325c !important;
+  color: black !important;
 }
 
 button span {
-  color: #ee0290 !important;
+  color: #325c36 !important;
 }
