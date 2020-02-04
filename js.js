@@ -14,16 +14,16 @@ for (let index = n; index >= 1950; index--) {
   option.text = index;
   selectYear.add(option);
 }
-$("input").prop('required',true);
+$("input").prop('required', true);
 $(function () {
   var inputs = document.getElementsByTagName("INPUT");
   for (var i = 0; i < inputs.length; i++) {
-      inputs[i].oninvalid = function (e) {
-          e.target.setCustomValidity("");
-          if (!e.target.validity.valid) {
-              e.target.setCustomValidity(e.target.getAttribute("data-error"));
-          }
-      };
+    inputs[i].oninvalid = function (e) {
+      e.target.setCustomValidity("");
+      if (!e.target.validity.valid) {
+        e.target.setCustomValidity(e.target.getAttribute("data-error"));
+      }
+    };
   }
 });
 // $(document).ready(function () {
@@ -42,22 +42,41 @@ document.getElementById("form").onsubmit = function (e) {
   let br = 0;
   $("select").each(function () {
     if (br == 3) {
-      list.push("      ");
+      list.push("<br>");
       br = 0;
     }
-    list.push($(this).val())
+    if (br == 0) {
+      list.push("المنطقة: ");
+      list.push(' ' + $(this).val() + ',')
+    } else if (br == 1) {
+      list.push("الصف: ");
+      list.push(' ' + $(this).val() + ',')
+    } else if (br == 2) {
+      list.push("السنة: ");
+      list.push(' ' + $(this).val() + '.')
+    }
+    list.push("&nbsp;");
     br++;
   })
-  var body = `المقدم: ${$("#sname").val()}` + '\r\n' + `التاريخ: ${TodayDate()}` +
-    '\r\n' + `الهاتف: ${$("#sphone").val()}` + '\r\n' + `الطالب: ${$("#student-name").val()}` +
-    '\r\n' + `المدرسة: ${$("#school-name").val()}` +
-    '\r\n' + `الطلب: ${list}`;
+  console.log(list.join(""))
+  var body = `<h2 style="text-align:center;">استمارة طالب</h2>
+  <p style="font-size:20px; font-weight:500; letter-spacing: 1px;">
+  المقدم: ${$("#sname").val()}` + '<br>' + `التاريخ: ${TodayDate()}` +
+    '<br>' + `الهاتف: ${$("#sphone").val()}` + '<br>' + `الطالب: ${$("#student-name").val()}` +
+    '<br>' + `المدرسة: ${$("#school-name").val()}` +
+    '<br>' + `${list.join("")}
+  </p>`;
   Email.send({
     SecureToken: "375103b8-b11b-4107-b24e-5f89797e1850",
     To: "chcrak@gmail.com",
     From: "chcrak@gmail.com",
-    Subject: `طلب تسلسل دراسي ل${$("#student-name").val()}`,
-    Body: body
+    Subject: `طلب التسلسل الدراسي لـ: ${$("#student-name").val()}`,
+    Body: `<div style="letter-spacing: 1px;
+    border-right: 6px solid #323130;
+    background-color:rgba(0, 0, 0, 0.01);
+    position:absolute; right:0; display: inline-block;
+    padding:20px !important; border-radius: 10px!important; font-family: 'Calibri', sans-serif;
+    color:#323130;" dir="rtl">${body}</div>`
   }).then((message) => {
     if (message == "OK") {
       $("#main").addClass("blur");
@@ -70,6 +89,7 @@ document.getElementById("form").onsubmit = function (e) {
       $("#overlay").addClass("disable")
       $("body").css("overflow", "hidden");
     }
+    document.getElementById("form").reset();
   });
 };
 
@@ -81,4 +101,3 @@ function TodayDate() {
   return today = mm + '/' + dd + '/' + yyyy;
 
 }
-
