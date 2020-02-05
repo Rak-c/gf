@@ -40,6 +40,14 @@ html {
   width: 100vw;
   text-align: center;
   margin-bottom: 40px;
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(rgba(0, 0, 0, 1)),
+    to(rgba(0, 0, 0, 0.8))
+  );
+  mask-image: linear-gradient(center top, center bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
 .frame-top img {
