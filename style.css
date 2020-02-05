@@ -38,19 +38,29 @@ html {
 
 .frame-top {
   width: 100vw;
-  text-align:center;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .frame-top img {
-  width: 50vw;
+  width: 650px;
 }
 
 .frame-bottom {
   width: 100vw;
+  text-align: center;
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    center bottom,
+    center top,
+    from(rgba(0, 0, 0, 1)),
+    to(rgba(0, 0, 0, 0.3))
+  );
+  mask-image: linear-gradient(center bottom, center top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
 .frame-bottom img {
-  width: 100vw;
+  width: 650px;
 }
 
 .frame-container {
@@ -75,7 +85,7 @@ html {
 
 h2 {
   font-size: 2.8rem;
-  color: #325c36;
+  color: #ba9a3a;
   font-style: normal;
   font-weight: 400;
   text-transform: capitalize;
@@ -90,7 +100,7 @@ h2 {
   justify-content: center;
   font: bold 22px/30px Nunito;
   letter-spacing: 0;
-  color: #325c36;
+  color: #ba9a3a;
 }
 
 .frame-panel .or:after,
@@ -111,7 +121,7 @@ input[type="text"]:disabled {
 }
 
 .frame .control-label {
-  color: #325c36;
+  color: #ba9a3a;
   margin-bottom: 0;
   font-weight: 600;
   font-size: 16px;
@@ -188,7 +198,7 @@ input[type="text"]:disabled {
 
 .frame .btn-default {
   color: #fff;
-  background: #2E7D32;
+  background: #ba9a3a;
 }
 
 code {
@@ -196,5 +206,5 @@ code {
 }
 
 button span {
-  color: #325c36 !important;
+  color: #ba9a3a !important;
 }
