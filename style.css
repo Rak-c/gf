@@ -38,10 +38,11 @@ html {
 
 .frame-top {
   width: 100vw;
+  text-align:center;
 }
 
 .frame-top img {
-  width: 100vw;
+  width: 50vw;
 }
 
 .frame-bottom {
