@@ -26,110 +26,114 @@
               <div class="frame-panel">
                 <div class="frame-panel-body">
                   <h2 class="text-center">
-                    Request to  Whom It May Concern Certificate - Study Sequence
+                    Request to Whom It May Concern Certificate - Study Sequence
                   </h2>
                   <div class="or">Instructions</div>
                   <div class="frame-header text-left">
-                   :: To fill out the application please follow the steps bellow :
-                   <br />
+                    :: To fill out the application please follow the steps bellow :
+                    <br />
                     - Accurately identify study years.
                     <br />
-                    - Write the patrilineal name (full name) of the student according to what was enrolled in the school. 
-                     <br />
-                    - Attach a copy of the previous academic certificate or one ( if available ) to help expedite the completion of the transaction.
+                    - Write the patrilineal name (full name) of the student according to what was enrolled in the
+                    school.
                     <br />
-                    - After completing the transaction, the applicant is contacted to attend, and We apologize for the delay if the application data provided are incorrect or incomplete.
+                    - Attach a copy of the previous academic certificate or one ( if available ) to help expedite the
+                    completion of the transaction.
+                    <br />
+                    - After completing the transaction, the applicant is contacted to attend, and We apologize for the
+                    delay if the application data provided are incorrect or incomplete.
                   </div>
                   <div class="or">,,</div>
                   <form id="form" class="form" action="return false;">
                     <div class="frame-form text-left">
                       <div class="form-group has-feedback">
                         <label for="sname" class="control-label">Applicant’s name</label>
-                        <input type="text" lang="ar" required class="form-control" id="sname" name="sname"
-                          autocomplete="off" value=""  data-error=" يرجى كتابت اسم مقدم الطلب الثلاثي" />
+                        <input type="text" lang="ar" required class="form-control en" id="sname" name="sname"
+                          autocomplete="off" value="" data-error=" يرجى كتابت اسم مقدم الطلب الثلاثي" />
                         <span class="help-block"></span>
                       </div>
                       <div class="form-group has-feedback">
                         <label for="request-date" class="control-label">Date of application</label>
-                        <input type="text" required class="form-control" id="request-date" name="request-date"
+                        <input type="text" required class="form-control en" id="request-date" name="request-date"
                           autocomplete="off" disabled />
                         <span class="help-block"></span>
                       </div>
                       <div class="form-group has-feedback">
                         <label for="sphone" class="control-label">Applicant mobile phone number</label>
-                        <input type="text" required class="form-control" id="sphone" name="sphone" autocomplete="off"
+                        <input type="text" required class="form-control en" id="sphone" name="sphone" autocomplete="off"
                           value="" data-error="يرجى كتابت رقم الهاتف المتحرك لمقدم الطلب" />
                         <span class="help-block"></span>
                       </div>
                       <div class="form-group has-feedback">
                         <label for="student-name" class="control-label">Student Name</label>
-                        <input required type="text" class="form-control" id="student-name" name="student-name"
-                          autocomplete="off" value=""  data-error=" يرجى كتابت اسم الطالب كاملاً" />
-                        <span class="help-block"></span>
-                      </div>
-                      <div class="form-group has-feedback">
-                        <label for="school-name" class="control-label">School Name</label>
-                        <input required type="text" class="form-control" id="school-name" name="school-name"
-                          autocomplete="off" value=""  data-error="يرجى كتابت اسم المدرسة" />
+                        <input required type="text" class="form-control en" id="student-name" name="student-name"
+                          autocomplete="off" value="" data-error=" يرجى كتابت اسم الطالب كاملاً" />
                         <span class="help-block"></span>
                       </div>
                       <div class="or">...</div>
-                      <div id="data-section">
-                        <div id="selectors-section" class="form-row">
-                          <div class="form-group col-md-4 has-feedback">
-                            <label for="zone" class="control-label">Educational zone</label>
-                            <select id="select-zone" required name="zone" class="form-control">
-                              <option value="رأس الخيمة">Ras al khaimah</option>
-                              <option value="أم القيوين">Umm Al Quawain</option>
-                              <option value="الفجيرة">Fujairah</option>
-                              <option value="عجمان">Ajman</option>
-                              <option value="الشارقة">Sharjah</option>
-                              <option value="دبي">Dubai</option>
-                              <option value="أبوظبي">Abu Dhabi</option>
-                              <option value="العين">Al Ain</option>
-                            </select>
-                            <span class="help-block"></span>
-                          </div>
-                          <div class="form-group col-md-4 has-feedback">
-                            <label for="class" class="control-label">Grade
-                            </label>
-                            <select id="select-class" required name="class" class="form-control">
-                              <option value="الأول">First</option>
-                              <option value="الثاني">Second</option>
-                              <option value="الثالث">Third</option>
-                              <option value="الرابع">Fourth</option>
-                              <option value="الخامس">Fifth</option>
-                              <option value="السادس">sixth</option>
-                              <option value="السابع">Seventh </option>
-                              <option value="الثامن">Eighth</option>
-                              <option value="التاسع">Ninth</option>
-                              <option value="العاشر">Tenth</option>
-                              <option value="الحادي عشر">Eleventh</option>
-                              <option value="الثاني عشر">Twelfth</option>
-                            </select>
-                            <span class="help-block"></span>
-                          </div>
-                          <div class="form-group col-md-4 has-feedback">
-                            <label for="year" class="control-label">Year</label>
-                            <select id="select-year" required name="year" class="form-control">
+                      <div id="addition">
+                        <div id="data-section">
+                          <div id="selectors-section" class="form-row">
+                            <div class="form-group col-md-4 has-feedback">
+                              <label for="zone" class="control-label">Educational zone</label>
+                              <select id="select-zone" required name="zone" class="form-control en">
+                                <option value="رأس الخيمة">Ras al khaimah</option>
+                                <option value="أم القيوين">Umm Al Quawain</option>
+                                <option value="الفجيرة">Fujairah</option>
+                                <option value="عجمان">Ajman</option>
+                                <option value="الشارقة">Sharjah</option>
+                                <option value="دبي">Dubai</option>
+                                <option value="أبوظبي">Abu Dhabi</option>
+                                <option value="العين">Al Ain</option>
+                              </select>
+                              <span class="help-block"></span>
+                            </div>
+                            <div class="form-group col-md-4 has-feedback">
+                              <label for="class" class="control-label">Grade
+                              </label>
+                              <select id="select-class" required name="class" class="form-control en">
+                                <option value="الأول">First</option>
+                                <option value="الثاني">Second</option>
+                                <option value="الثالث">Third</option>
+                                <option value="الرابع">Fourth</option>
+                                <option value="الخامس">Fifth</option>
+                                <option value="السادس">sixth</option>
+                                <option value="السابع">Seventh </option>
+                                <option value="الثامن">Eighth</option>
+                                <option value="التاسع">Ninth</option>
+                                <option value="العاشر">Tenth</option>
+                                <option value="الحادي عشر">Eleventh</option>
+                                <option value="الثاني عشر">Twelfth</option>
+                              </select>
+                              <span class="help-block"></span>
+                            </div>
+                            <div class="form-group col-md-4 has-feedback">
+                              <label for="year" class="control-label">Year</label>
+                              <select id="select-year" required name="year" class="form-control en">
 
-                            </select>
+                              </select>
+                              <span class="help-block"></span>
+                            </div>
+                          </div>
+                          <div class="form-group has-feedback">
+                            <label for="school-name" class="control-label">School Name</label>
+                            <input required type="text" class="form-control en school" id="school-name"
+                              name="school-name" autocomplete="off" value="" data-error="يرجى كتابت اسم المدرسة" />
                             <span class="help-block"></span>
                           </div>
+                          <div class="or">...</div>
+                        </div>
+                        <div class="form-group ">
+                          <button type="button" id="extra-btn" class="close">
+                            <code>Addition</code> <span> &#43; </span>
+                          </button>
+                        </div>
+                        <div class="row">
+                          <button type="submit" id="submit-btn" class="btn btn-default">
+                            Submit
+                          </button>
                         </div>
                       </div>
-                      <div class="or">...</div>
-                      <div class="form-group ">
-                        <button type="button" id="extra-btn" class="close">
-                          <code>Addition</code> <span> &#43; </span>
-                        </button>
-                      </div>
-                      <div class="row">
-                        <button type="submit" id="submit-btn" class="btn btn-default">
-                            Submit
-                        </button>
-                      </div>
-                    </div>
                   </form>
                 </div>
               </div>
