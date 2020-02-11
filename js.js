@@ -1,8 +1,8 @@
 document.getElementById("extra-btn").addEventListener("click", function () {
   var node = document.createElement("div");
-  var clone = document.getElementById("selectors-section").cloneNode(true);
+  var clone = document.getElementById("data-section").cloneNode(true);
   node.appendChild(clone);
-  document.getElementById("data-section").appendChild(node);
+  document.getElementById("addition").appendChild(node);
 });
 
 document.getElementById("request-date").value = TodayDate();
@@ -40,6 +40,10 @@ document.getElementById("form").onsubmit = function (e) {
   e.preventDefault();
   let list = [];
   let br = 0;
+  let schoolNames = [];
+  $(".school").each(function () {
+    schoolNames.push($(this).val())
+  });
   $("select").each(function () {
     if (br == 3) {
       list.push("<br>");
@@ -53,7 +57,10 @@ document.getElementById("form").onsubmit = function (e) {
       list.push(' ' + $(this).val() + ',')
     } else if (br == 2) {
       list.push("السنة: ");
-      list.push(' ' + $(this).val() + '.')
+      list.push(' ' + $(this).val() + ',')
+      list.push("&nbsp;");
+      list.push("المدرسة: ");
+      list.push(' ' +   schoolNames.pop() + '.')
     }
     list.push("&nbsp;");
     br++;
@@ -63,9 +70,7 @@ document.getElementById("form").onsubmit = function (e) {
   <p style="font-size:20px; font-weight:500; letter-spacing: 1px;">
   المقدم: ${$("#sname").val()}` + '<br>' + `التاريخ: ${TodayDate()}` +
     '<br>' + `الهاتف: ${$("#sphone").val()}` + '<br>' + `الطالب: ${$("#student-name").val()}` +
-    '<br>' + `المدرسة: ${$("#school-name").val()}` +
-    '<br>' + `${list.join("")}
-  </p>`;
+    '<br>' + `${list.join("")} </p>`;
   Email.send({
     SecureToken: "375103b8-b11b-4107-b24e-5f89797e1850",
     To: "chcrak@gmail.com",
@@ -88,6 +93,7 @@ document.getElementById("form").onsubmit = function (e) {
       $("#main4").removeClass("hide");
       $("#overlay").addClass("disable")
       $("html").css("overflow", "hidden");
+      alert(message);
     }
     document.getElementById("form").reset();
   });

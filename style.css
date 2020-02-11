@@ -217,6 +217,9 @@ input[type="text"]:disabled {
   padding-right: 0.4rem;
   direction: rtl;
 }
+.en {
+  direction: ltr !important;
+}
 
 .frame .btn-default {
   color: #fff;
@@ -229,4 +232,7 @@ code {
 
 button span {
   color: #ba9a3a !important;
+}
+#extra-btn{
+  outline: none;
 }
